@@ -15,7 +15,7 @@ github "mercari/BottomHalfModal"
 ### CocoaPods
 
 ```
-pods "BottomHalfModal", :git => "https://github.com/mercari/BottomHaflModal"
+pod "BottomHalfModal""
 ```
 
 
