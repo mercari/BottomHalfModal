@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationViewController" customModule="BottomHalfModalDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="301"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-fg-vnc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="243"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80b-a6-Zz4">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cb-lS-Bz9">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Push"/>
+                                    <connections>
+                                        <action selector="push:" destination="-1" eventType="touchUpInside" id="C1Y-Zh-X9b"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="2Cb-lS-Bz9" secondAttribute="trailing" id="6B0-xY-NUg"/>
+                                <constraint firstItem="2Cb-lS-Bz9" firstAttribute="top" secondItem="80b-a6-Zz4" secondAttribute="top" id="JjV-Yf-49G"/>
+                                <constraint firstItem="2Cb-lS-Bz9" firstAttribute="leading" secondItem="80b-a6-Zz4" secondAttribute="leading" id="dOS-d1-gen"/>
+                                <constraint firstAttribute="bottom" secondItem="2Cb-lS-Bz9" secondAttribute="bottom" id="u58-yv-e8C"/>
+                                <constraint firstAttribute="height" constant="60" id="uG5-ZF-DFt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlC-5t-dnt">
+                            <rect key="frame" x="0.0" y="60" width="414" height="1"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="hyI-bV-ugo"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4N-uw-R6Z">
+                            <rect key="frame" x="0.0" y="61" width="414" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-6v-6Dj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Present another half modal"/>
+                                    <connections>
+                                        <action selector="presentAnotherHalfModal:" destination="-1" eventType="touchUpInside" id="UzN-fU-e2U"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="9Q4-6v-6Dj" secondAttribute="bottom" id="7sh-uJ-kpc"/>
+                                <constraint firstItem="9Q4-6v-6Dj" firstAttribute="top" secondItem="t4N-uw-R6Z" secondAttribute="top" id="EBP-Ag-blD"/>
+                                <constraint firstAttribute="height" constant="60" id="NWR-Pu-4sU"/>
+                                <constraint firstAttribute="trailing" secondItem="9Q4-6v-6Dj" secondAttribute="trailing" id="S7t-4Q-cgX"/>
+                                <constraint firstItem="9Q4-6v-6Dj" firstAttribute="leading" secondItem="t4N-uw-R6Z" secondAttribute="leading" id="psm-Rg-gny"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-Nc-Tdx">
+                            <rect key="frame" x="0.0" y="121" width="414" height="1"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="bWd-og-vif"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9J-7i-Hq8">
+                            <rect key="frame" x="0.0" y="122" width="414" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJa-EX-g3f">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Present over current context"/>
+                                    <connections>
+                                        <action selector="presentOverCurrentContext:" destination="-1" eventType="touchUpInside" id="lVv-JW-2xd"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="CJa-EX-g3f" firstAttribute="leading" secondItem="T9J-7i-Hq8" secondAttribute="leading" id="4np-56-sac"/>
+                                <constraint firstAttribute="height" constant="60" id="I8j-aC-cR9"/>
+                                <constraint firstAttribute="trailing" secondItem="CJa-EX-g3f" secondAttribute="trailing" id="Sx1-Ch-Oei"/>
+                                <constraint firstAttribute="bottom" secondItem="CJa-EX-g3f" secondAttribute="bottom" id="fYO-gH-DEG"/>
+                                <constraint firstItem="CJa-EX-g3f" firstAttribute="top" secondItem="T9J-7i-Hq8" secondAttribute="top" id="nym-sa-yDc"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8I-je-bue">
+                            <rect key="frame" x="0.0" y="182" width="414" height="1"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="ZJg-w5-40V"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFQ-BG-BDv">
+                            <rect key="frame" x="0.0" y="183" width="414" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8f-eM-u3N">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Present over full screen"/>
+                                    <connections>
+                                        <action selector="presentOverFullScreen:" destination="-1" eventType="touchUpInside" id="Prc-Br-xsC"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="s8f-eM-u3N" firstAttribute="leading" secondItem="bFQ-BG-BDv" secondAttribute="leading" id="18l-rL-Ozv"/>
+                                <constraint firstAttribute="bottom" secondItem="s8f-eM-u3N" secondAttribute="bottom" id="3b0-tD-3C7"/>
+                                <constraint firstItem="s8f-eM-u3N" firstAttribute="top" secondItem="bFQ-BG-BDv" secondAttribute="top" id="fVb-2L-eVc"/>
+                                <constraint firstAttribute="height" constant="60" id="mRF-W2-aM4"/>
+                                <constraint firstAttribute="trailing" secondItem="s8f-eM-u3N" secondAttribute="trailing" id="qmx-ey-5G8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JdB-fg-vnc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CY5-fJ-17a"/>
+                <constraint firstItem="JdB-fg-vnc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Q0T-Sw-ZGh"/>
+                <constraint firstItem="JdB-fg-vnc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xdz-qL-b3Y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="351.89732142857139"/>
+        </view>
+    </objects>
+</document>
