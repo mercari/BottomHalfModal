@@ -1,6 +1,6 @@
 //
 //  SheetAnimationController.swift
-//  MerpayCoreKit
+//  BottomHalfModal
 //
 //  Created by jarinosuke on 2018/02/09.
 //  Copyright © 2018 merpay, Inc. All rights reserved.

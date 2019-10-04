@@ -1,6 +1,6 @@
 //
 //  BottomHalfNavigationController.swift
-//  MerpayCoreKit
+//  BottomHalfModal
 //
 //  Created by ku on 2018/04/26.
 //  Copyright © 2018 merpay, Inc. All rights reserved.
