@@ -15,7 +15,7 @@ github "mercari/BottomHalfModal"
 ### CocoaPods
 
 ```
-pod "BottomHalfModal""
+pod "BottomHalfModal"
 ```
 
 
