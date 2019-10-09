@@ -47,14 +47,14 @@ final class NavigationViewController: UIViewController, SheetContentHeightModifi
     @IBAction private func presentAnotherHalfModal(_ sender: Any) {
         let vc = PresentViewController()
         let nav = BottomHalfModalNavigationController(rootViewController: vc)
-        present(nav, animated: true, completion: nil)
+        presentBottomHalfModal(nav, animated: true, completion: nil)
     }
 
     @IBAction private func presentOverCurrentContext(_ sender: Any) {
         let vc = PresentOverCurrentContextViewController()
-        let nav = UINavigationController(rootViewController: vc)
+        let nav = BottomHalfModalNavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .overCurrentContext
-        present(nav, animated: true, completion: nil)
+        presentBottomHalfModal(nav, animated: true, completion: nil)
     }
 
     @IBAction private func presentOverFullScreen(_ sender: Any) {
