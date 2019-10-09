@@ -19,6 +19,11 @@
 		2439F2B6232A19DF00B5BAD4 /* SheetPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439F2B5232A19DF00B5BAD4 /* SheetPresentationController.swift */; };
 		2439F2B8232A1CB800B5BAD4 /* BottomHalfModal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2439F2A9232A188000B5BAD4 /* BottomHalfModal.framework */; };
 		2439F2BA232A1CC400B5BAD4 /* BottomHalfModal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2439F2A9232A188000B5BAD4 /* BottomHalfModal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		244FD882234DBB7F00622877 /* SheetPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FD881234DBB7F00622877 /* SheetPresentationDelegate.swift */; };
+		244FD884234DBBA400622877 /* SheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FD883234DBBA400622877 /* SheetPresenter.swift */; };
+		244FD886234DBBDA00622877 /* SheetContentHeightModifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FD885234DBBDA00622877 /* SheetContentHeightModifiable.swift */; };
+		244FD888234DBC1000622877 /* SheetControllerContentSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FD887234DBC1000622877 /* SheetControllerContentSizing.swift */; };
+		244FD88A234DBC3100622877 /* SheetContentHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FD889234DBC3100622877 /* SheetContentHeight.swift */; };
 		24764069232B1C5E00A2B7F0 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24764067232B1C5E00A2B7F0 /* BasicViewController.swift */; };
 		2476406A232B1C5E00A2B7F0 /* BasicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24764068232B1C5E00A2B7F0 /* BasicViewController.xib */; };
 		24764071232B1F9200A2B7F0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476406F232B1F9200A2B7F0 /* NavigationViewController.swift */; };
@@ -76,6 +81,11 @@
 		2439F2B3232A19B700B5BAD4 /* SheetAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAnimationController.swift; sourceTree = "<group>"; };
 		2439F2B5232A19DF00B5BAD4 /* SheetPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetPresentationController.swift; sourceTree = "<group>"; };
 		2439F2BF232A1D2300B5BAD4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		244FD881234DBB7F00622877 /* SheetPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetPresentationDelegate.swift; sourceTree = "<group>"; };
+		244FD883234DBBA400622877 /* SheetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetPresenter.swift; sourceTree = "<group>"; };
+		244FD885234DBBDA00622877 /* SheetContentHeightModifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetContentHeightModifiable.swift; sourceTree = "<group>"; };
+		244FD887234DBC1000622877 /* SheetControllerContentSizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetControllerContentSizing.swift; sourceTree = "<group>"; };
+		244FD889234DBC3100622877 /* SheetContentHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetContentHeight.swift; sourceTree = "<group>"; };
 		24764067232B1C5E00A2B7F0 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		24764068232B1C5E00A2B7F0 /* BasicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicViewController.xib; sourceTree = "<group>"; };
 		2476406F232B1F9200A2B7F0 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -182,10 +192,15 @@
 			isa = PBXGroup;
 			children = (
 				2439F2AB232A188000B5BAD4 /* BottomHalfModal.h */,
-				2439F2AC232A188000B5BAD4 /* Info.plist */,
 				2439F2B1232A193700B5BAD4 /* BottomHalfModalNavigationController.swift */,
+				2439F2AC232A188000B5BAD4 /* Info.plist */,
 				2439F2B3232A19B700B5BAD4 /* SheetAnimationController.swift */,
+				244FD889234DBC3100622877 /* SheetContentHeight.swift */,
+				244FD885234DBBDA00622877 /* SheetContentHeightModifiable.swift */,
+				244FD887234DBC1000622877 /* SheetControllerContentSizing.swift */,
 				2439F2B5232A19DF00B5BAD4 /* SheetPresentationController.swift */,
+				244FD881234DBB7F00622877 /* SheetPresentationDelegate.swift */,
+				244FD883234DBBA400622877 /* SheetPresenter.swift */,
 			);
 			path = BottomHalfModal;
 			sourceTree = "<group>";
@@ -369,8 +384,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244FD88A234DBC3100622877 /* SheetContentHeight.swift in Sources */,
+				244FD886234DBBDA00622877 /* SheetContentHeightModifiable.swift in Sources */,
 				2439F2B4232A19B700B5BAD4 /* SheetAnimationController.swift in Sources */,
 				2439F2B6232A19DF00B5BAD4 /* SheetPresentationController.swift in Sources */,
+				244FD888234DBC1000622877 /* SheetControllerContentSizing.swift in Sources */,
+				244FD884234DBBA400622877 /* SheetPresenter.swift in Sources */,
+				244FD882234DBB7F00622877 /* SheetPresentationDelegate.swift in Sources */,
 				2439F2B2232A193700B5BAD4 /* BottomHalfModalNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
