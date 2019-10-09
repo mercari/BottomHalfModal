@@ -37,6 +37,22 @@ class XXXXViewController: SheetContentHeightModifiable {
 
 ```
 
+Then, call `presentBottomHalfModal(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?)` to show  the content.
+
+```swift
+    let vc = XXXXViewController()
+    presentBottomHalfModal(vc, animated: true, completion: nil)
+```
+
+If you want to use `UINavigationController` in BottomHalfModal, use `BottomHalfModalNavigationController`. It handles content height update while push and pop navigations.
+
+```swift
+    let vc = XXXXViewController()
+    let nav = BottomHalfNavigationController(rootViewController: vc)
+    presentBottomHalfModal(nav, animated: true, completion: nil)
+```
+
+
 If you support multiple device orientation, please call `adjustFrameToSheetContentHeightIfNeeded()` in `viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)` too.
 
 ```swift
@@ -45,7 +61,6 @@ override func viewWillTransition(to size: CGSize, with coordinator: UIViewContro
     adjustFrameToSheetContentHeightIfNeeded(with: coordinator)
 }
 ```
-
 
 ## Demo
 

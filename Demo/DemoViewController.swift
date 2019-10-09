@@ -22,35 +22,42 @@ final class DemoViewController: UITableViewController {
                 text: "Basic",
                 action: { [weak self] in
                     let nav = BottomHalfModalNavigationController(rootViewController: BasicViewController())
-                    self?.navigationController?.present(nav, animated: true, completion: nil)
+                    self?.presentBottomHalfModal(nav, animated: true, completion: nil)
                 }
             ),
             (
                 text: "TableView",
                 action: { [weak self] in
                     let nav = BottomHalfModalNavigationController(rootViewController: TableViewController(style: .plain))
-                    self?.present(nav, animated: true, completion: nil)
+                    self?.presentBottomHalfModal(nav, animated: true, completion: nil)
                 }
             ),
             (
                 text: "Navigation",
                 action: { [weak self] in
                     let nav = BottomHalfModalNavigationController(rootViewController: NavigationViewController())
-                    self?.present(nav, animated: true, completion: nil)
+                    self?.presentBottomHalfModal(nav, animated: true, completion: nil)
                 }
             ),
             (
                 text: "Sticky Button",
                 action: { [weak self] in
                     let nav = BottomHalfModalNavigationController(rootViewController: StickyButtonViewController())
-                    self?.present(nav, animated: true, completion: nil)
+                    self?.presentBottomHalfModal(nav, animated: true, completion: nil)
                 }
             ),
             (
                 text: "Input",
                 action: { [weak self] in
                     let nav = BottomHalfModalNavigationController(rootViewController: InputViewController())
-                    self?.present(nav, animated: true, completion: nil)
+                    self?.presentBottomHalfModal(nav, animated: true, completion: nil)
+                }
+            ),
+            (
+                text: "Without NavigationController",
+                action: { [weak self] in
+                    let vc = StickyButtonViewController()
+                    self?.presentBottomHalfModal(vc, animated: true, completion: nil)
                 }
             )
         ]
@@ -72,6 +79,7 @@ final class DemoViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let (text, _) = cells[indexPath.row]
         cell.textLabel?.text = text
+        cell.textLabel?.numberOfLines = 0
         return cell
     }
 
