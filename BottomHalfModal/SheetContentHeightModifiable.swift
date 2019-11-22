@@ -21,7 +21,11 @@ extension SheetContentHeightModifiable where Self: UIViewController {
     public func adjustFrameToSheetContentHeightIfNeeded(with coordinator: UIViewControllerTransitionCoordinator) {
         coordinator.animate(alongsideTransition: nil) { [weak self] _ in
             guard let strongSelf = self else { return }
-            if strongSelf.navigationController?.topViewController == strongSelf {
+            if let nav = strongSelf.navigationController {
+                if nav.topViewController == strongSelf {
+                    strongSelf.adjustFrameToSheetContentHeightIfNeeded()
+                }
+            } else {
                 strongSelf.adjustFrameToSheetContentHeightIfNeeded()
             }
         }
