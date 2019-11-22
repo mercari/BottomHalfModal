@@ -36,7 +36,7 @@ extension UIViewController: SheetControllerContentSizing {
             if let nav = navigationController {
                 nav.preferredContentSize = CGSize(width: width, height: newValue + additionalBottomHeight)
             } else {
-                preferredContentSize = CGSize(width: view.bounds.width, height: newValue + additionalBottomHeight)
+                preferredContentSize = CGSize(width: width, height: newValue + additionalBottomHeight)
             }
         }
     }
