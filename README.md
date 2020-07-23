@@ -48,7 +48,7 @@ If you want to use `UINavigationController` in BottomHalfModal, use `BottomHalfM
 
 ```swift
     let vc = XXXXViewController()
-    let nav = BottomHalfNavigationController(rootViewController: vc)
+    let nav = BottomHalfModalNavigationController(rootViewController: vc)
     presentBottomHalfModal(nav, animated: true, completion: nil)
 ```
 

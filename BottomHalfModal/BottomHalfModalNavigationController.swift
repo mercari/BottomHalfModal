@@ -1,5 +1,5 @@
 //
-//  BottomHalfNavigationController.swift
+//  BottomHalfModalNavigationController.swift
 //  BottomHalfModal
 //
 //  Created by ku on 2018/04/26.
