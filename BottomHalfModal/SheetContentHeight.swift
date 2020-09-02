@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public enum SheetContentHeight {
     public static let `default`: CGFloat = 320
